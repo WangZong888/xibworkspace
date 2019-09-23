@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="jqwebsercice_client" />
+        <module name="rhdetail" />
+        <module name="rhdetail_index" />
+        <module name="tianyan" />
+        <module name="xiaguohang" />
+        <module name="xib_after_loan" />
+        <module name="XIB_businessdata" />
+        <module name="xib_data_sink" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jqwebsercice_client" target="1.8" />
+      <module name="rhdetail" target="1.8" />
+      <module name="rhdetail_index" target="1.8" />
+      <module name="tianyan" target="1.8" />
+      <module name="xiaguohang" target="1.8" />
+      <module name="xib_after_loan" target="1.8" />
+      <module name="XIB_businessdata" target="1.8" />
+      <module name="xib_data_sink" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="tianyan" options="-parameters" />
+      <module name="xiaguohang" options="-parameters" />
+    </option>
+  </component>
+</project>

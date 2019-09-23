@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-table.min.css">
+<style>
+table {
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	table-layout: fixed; /*不添加此样式，会全部显示    */
+	word-break: break-all;
+	word-wrap: break-all;
+}
+
+table td {
+	border: 1px solid #eef2e9;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<table id="table" data-toggle="table" data-show-columns="true"
+			data-search="true" data-show-refresh="true" data-show-toggle="true"
+			data-pagination="true">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>请求数据</th>
+					<th>响应结果</th>
+					<th>创建时间</th>
+					<th>类别</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="log : ${list}">
+					<td th:text="${log.id}"></td>
+					<td th:text="${log.request_data}"></td>
+					<td th:text="${log.calc_result}"></td>
+					<td th:text="${log.create_time}"></td>
+					<td th:if="${log.type == '1'}">首信</td>
+					<td th:if="${log.type == '2'}">复贷</td>
+					<td th:if="${log.type == '3'}">用信</td>
+					<td th:if="${log.type == '4'}">历史数据</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/tableExport.js"></script>
+	<script src="js/jquery.base64.js"></script>
+	<script src="js/bootstrap-table.js"></script>
+	<script src="js/bootstrap-table-export.js"></script>
+	<script>
+		$(function() {
+			tt();
+		})
+		function tt() {
+			var $trList = $("tbody").children("tr");
+			for (var i = 0; i < $trList.length; i++) {
+				var $tdArr = $trList.eq(i).find("td");
+				for (var j = 0; j < $tdArr.length; j++) {
+					var $td_text = $tdArr.eq(j).text();
+					$tdArr.eq(j).attr("title", $td_text);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+server:
+  port: 8082
+spring:
+  kafka:
+    consumer:
+      enable-auto-commit: true
+      group-id: tianeyes
+      auto-offset-reset: latest
+#      bootstrap-servers: bigdata02:9092,bigdata03:9092,bigdata04:9092
+      bootstrap-servers: hadoop01:9092,hadoop02:9092,hadoop03:9092
+    producer:
+#      bootstrap-servers: bigdata02:9092,bigdata03:9092,bigdata04:9092
+      bootstrap-servers: hadoop01:9092,hadoop02:9092,hadoop03:9092
+  datasource:
+    primary:
+#      username: mcl_sit
+#      password: mcl_sit
+#      jdbc-url: jdbc:mysql://10.10.188.12:12003/galaxyeyes_sit?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+#      driver-class-name: com.mysql.jdbc.Driver
+
+      username: root
+      password: root
+      jdbc-url: jdbc:mysql://localhost:3306/dbty
+      driver-class-name: com.mysql.jdbc.Driver
+    secondary:
+#      username: mcl_sit
+#      password: mcl_sit
+#      jdbc-url: jdbc:mysql://10.10.188.12:12003/bigdata_sit?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+#      driver-class-name: com.mysql.jdbc.Driver
+
+      username: root
+      password: root
+      jdbc-url: jdbc:mysql://localhost:3306/dbty
+      driver-class-name: com.mysql.jdbc.Driver
+
+
+
+#    thridary:
+#      username: root
+#      password:
+#      jdbc-url: jdbc:mysql://127.0.0.1:3306/bigdata?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false&testOnBorrow=true&validationQuery=select 1
+#      driver-class-name: com.mysql.jdbc.Driver
+#    fourth:
+#      username: galaxyeyes
+#      password: 12345654321
+#      jdbc-url: jdbc:mysql://192.168.107.28:3306/sit_galaxyeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#      driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    static-path-pattern: /**
+  thymeleaf:
+    prefix: classpath:/templates/
+
+    #挡板默认验签成功，去掉挡板时需要修改验签flag值
+xiahuohang:
+  wenliurl: https://www-devhf.qiyexi.com/xibapi/route
+#  wenliurl: http://10.10.67.240:7300/mock/5d1d68a04a3a7c2f7b3a5f00/datas/www-devhf.qiyexi.com/xibapi/route_copy
+  isrequest: 0

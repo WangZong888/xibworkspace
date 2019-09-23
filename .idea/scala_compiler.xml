@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="Maven 1" modules="XIB_businessdata,rhdetail,rhdetail_index,xiaguohang,xib_after_loan,xib_data_sink" />
+  </component>
+</project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/XIB_businessdata/XIB_businessdata.iml" filepath="$PROJECT_DIR$/XIB_businessdata/XIB_businessdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jqwebsercice_client/jqwebsercice_client.iml" filepath="$PROJECT_DIR$/jqwebsercice_client/jqwebsercice_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rhdetail/rhdetail.iml" filepath="$PROJECT_DIR$/rhdetail/rhdetail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rhdetail_index/rhdetail_index.iml" filepath="$PROJECT_DIR$/rhdetail_index/rhdetail_index.iml" />
+      <module fileurl="file://$PROJECT_DIR$/code/tianyan.iml" filepath="$PROJECT_DIR$/code/tianyan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xiaguohang/xiaguohang.iml" filepath="$PROJECT_DIR$/xiaguohang/xiaguohang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xib_after_loan/xib_after_loan.iml" filepath="$PROJECT_DIR$/xib_after_loan/xib_after_loan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xib_data_sink/xib_data_sink.iml" filepath="$PROJECT_DIR$/xib_data_sink/xib_data_sink.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/xibworkspace.iml" filepath="$PROJECT_DIR$/.idea/xibworkspace.iml" />
+    </modules>
+  </component>
+</project>
